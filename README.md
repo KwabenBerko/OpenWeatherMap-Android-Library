@@ -1,7 +1,7 @@
 ## OpenWeatherMap-Java-Library
 
-You need an APPID to use the OpenWeatherMap API. Head on over to their [website]("http://openweathermap.org/") if you don't already have one.
-[Quora profile link for Adam D'Angelo](http://www.quora.com/Adam-DAngelo)
+**You need an APPID to use the OpenWeatherMap API. Head on over to their [website](http://openweathermap.org/) if you don't already have one.**
+
 
 ## Download
 
