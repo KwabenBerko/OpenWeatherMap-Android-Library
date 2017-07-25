@@ -3,9 +3,9 @@
 **You need an APPID to use the OpenWeatherMap API. Head on over to their [website](http://openweathermap.org/) if you don't already have one.**
 
 
-## Setting up
+## Download
 
-#### Step 1. Add the JitPack repository to your root ```build.gradle```.
+#### Step 1. Add the JitPack repository to your root ```build.gradle``` file.
 
 ``` java
 allprojects {
@@ -20,7 +20,14 @@ allprojects {
 
 ``` compile 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:v1.0.0'```
 
-**Note: Remember to include the INTERNET permission to your manifest file**
+**Note: Remember to include the INTERNET permission to your manifest file **
+
+## Usage
+
+``` java 
+OpenWeatherMapHelper helper = new OpenWeatherMapHelper();
+helper.setAppId("e1e88645e0c18f577551c16afbe063fd");
+```
 
 ## Features
 
@@ -34,3 +41,4 @@ allprojects {
 3.Geographic Coordinates
 
 4.Zip Code
+
