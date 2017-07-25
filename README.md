@@ -74,7 +74,7 @@ helper.getCurrentWeatherByCityName("Accra", new OpenWeatherMapHelper.CurrentWeat
 ```
 
 #### Get current weather by City ID:
-```
+```java
         helper.getCurrentWeatherByCityID("524901", new OpenWeatherMapHelper.CurrentWeatherCallback() {
             @Override
             public void onSuccess(CurrentWeather currentWeather) {
@@ -96,7 +96,7 @@ helper.getCurrentWeatherByCityName("Accra", new OpenWeatherMapHelper.CurrentWeat
 ```
 #### Get current weather by City Geographic Coordinates:
 
-```
+```java
    helper.getCurrentWeatherByGeoCoordinates(5.6037, 0.1870, new OpenWeatherMapHelper.CurrentWeatherCallback() {
             @Override
             public void onSuccess(CurrentWeather currentWeather) {
@@ -117,7 +117,7 @@ helper.getCurrentWeatherByCityName("Accra", new OpenWeatherMapHelper.CurrentWeat
 
 ```
 #### Get current weather by City Zip Code:
-```
+```java
 helper.getCurrentWeatherByZipCode("90003", new OpenWeatherMapHelper.CurrentWeatherCallback() {
             @Override
             public void onSuccess(CurrentWeather currentWeather) {
