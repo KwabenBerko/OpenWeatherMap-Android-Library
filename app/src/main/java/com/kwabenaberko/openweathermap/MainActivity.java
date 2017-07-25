@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         //Instantiate class
         OpenWeatherMapHelper helper = new OpenWeatherMapHelper();
 
-        //Set APP_KEY
+        //Set API KEY
         helper.setApiKey(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
 
         //Set Units
