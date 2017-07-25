@@ -16,10 +16,21 @@ allprojects {
 }
 ```
 
-#### Step 2 : Download via Gradle:
+#### Step 2 : Download via ```Gradle```:
 
 ``` compile 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:v1.0.0'```
 
-## Note: Remember to include the INTERNET permission to your manifest file
+**Note: Remember to include the INTERNET permission to your manifest file**
 
 ## Features
+
+### Current Weather
+#### Get current weather by:
+
+1.City Name
+
+2.City ID
+
+3.Geographic Coordinates
+
+4.Zip Code
