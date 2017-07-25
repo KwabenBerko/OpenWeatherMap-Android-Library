@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">OpenWeatherMap</string>
+    <string name="OPEN_WEATHER_MAP_APP_KEY">YOUR_API_KEY_GOES_HRE</string>
+</resources>

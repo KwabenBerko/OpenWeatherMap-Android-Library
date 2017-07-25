@@ -17,8 +17,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Instantiate class
         OpenWeatherMapHelper helper = new OpenWeatherMapHelper();
-        helper.setAppId(getString(R.string.OPEN_WEATHER_MAP_APP_ID));
+
+        //Set APP_KEY
+        helper.setAppId(getString(R.string.OPEN_WEATHER_MAP_APP_KEY));
+
+        //Set Units
         helper.setUnits("imperial");
 
         /*
