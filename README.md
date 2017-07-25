@@ -24,10 +24,29 @@ allprojects {
 
 ## Usage
 
+#### Instantiate the OpenWeatherMapHelper class
+
 ``` java 
 OpenWeatherMapHelper helper = new OpenWeatherMapHelper();
-helper.setAppId("e1e88645e0c18f577551c16afbe063fd");
 ```
+#### Set your APPID (Required) 
+
+``` java 
+helper.setAppId("YOUR_APP_ID_GOES_HERE");
+```
+
+#### Set your Units (Optional, fahrenheit by default) 
+
+``` java 
+helper.setUnits("metric");
+```
+
+##### Unit Options: 
+
+1. ```"metric"```
+
+2. ```"fahrenheit"```
+
 
 ## Features
 
