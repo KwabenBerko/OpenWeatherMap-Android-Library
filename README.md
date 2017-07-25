@@ -20,7 +20,7 @@ allprojects {
 
 ``` compile 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:v1.0.0'```
 
-**Note: Remember to include the INTERNET permission to your manifest file **
+**Note: Remember to include the INTERNET permission to your manifest file**
 
 ## Usage
 
@@ -51,13 +51,7 @@ helper.setUnits("metric");
 ## Features
 
 ### Current Weather
-#### Get current weather by:
-
-1.City Name
-
-2.City ID
-
-3.Geographic Coordinates
-
-4.Zip Code
-
+#### Get current weather by City Name:
+#### Get current weather by City ID:
+#### Get current weather by City Geographic Coordinates:
+#### Get current weather by City Zip Code:
