@@ -32,18 +32,18 @@ OpenWeatherMapHelper helper = new OpenWeatherMapHelper();
 #### Set your APPID (Required) 
 
 ``` java 
-helper.setAppId("YOUR_APP_ID_GOES_HERE");
+helper.setAppId(getString(R.string.OPEN_WEATHER_MAP_APP_ID));
 ```
 
 #### Set your Units (Optional, fahrenheit by default) 
 
 ``` java 
-helper.setUnits("metric");
+helper.setUnits("imperial");
 ```
 
 ##### Unit Options: 
 
-1. ```"metric"```
+1. ```"imperial"```
 
 2. ```"fahrenheit"```
 
