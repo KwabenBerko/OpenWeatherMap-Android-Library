@@ -5,7 +5,19 @@
 
 ## Download
 
-#### Download via Gradle:
+#### Step 1. Add the JitPack repository to your root build.gradle.
+
+``` java
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+```
+
+#### Step 2 : Download via Gradle:
 
 ``` compile 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:v1.0.0'```
 
+## Features
