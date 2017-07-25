@@ -52,6 +52,7 @@ helper.setUnits("imperial");
 
 ## Features
 
+
 ### Current Weather
 #### Get current weather by City Name:
 
@@ -139,3 +140,7 @@ helper.getCurrentWeatherByZipCode("90003", new OpenWeatherMapHelper.CurrentWeath
         });
 
 ```
+
+### Upcoming Features
+1. 5 day / 3 hour forecast
+2. 16 day / daily forecast 
