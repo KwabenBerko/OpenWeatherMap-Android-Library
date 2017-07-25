@@ -40,7 +40,7 @@ public class OpenWeatherMapHelper {
     }
 
     //METHODS TO SETUP APPLICATION
-    public void setAppId(String appId){
+    public void setApiKey(String appId){
         options.put("APPID", appId);
     }
     public void setUnits(String units){
