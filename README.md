@@ -52,6 +52,88 @@ helper.setUnits("imperial");
 
 ### Current Weather
 #### Get current weather by City Name:
+
+```java
+helper.getCurrentWeatherByCityName("Accra", new OpenWeatherMapHelper.CurrentWeatherCallback() {
+            @Override
+            public void onSuccess(CurrentWeather currentWeather) {
+                Log.v(TAG,
+                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLat() +"\n"
+                        +"Weather Description: " + currentWeather.getWeatherArray().get(0).getDescription() + "\n"
+                        +"Temperature: " + currentWeather.getMain().getTempMax()+"\n"
+                        +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
+                        +"City, Country: " + currentWeather.getName() + ", " + currentWeather.getSys().getCountry()
+                        );
+            }
+
+            @Override
+            public void onFailure(Throwable throwable) {
+                Log.v(TAG, throwable.getMessage());
+            }
+        });
+```
+
 #### Get current weather by City ID:
+```
+        helper.getCurrentWeatherByCityID("524901", new OpenWeatherMapHelper.CurrentWeatherCallback() {
+            @Override
+            public void onSuccess(CurrentWeather currentWeather) {
+                Log.v(TAG,
+                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLat() +"\n"
+                        +"Weather Description: " + currentWeather.getWeatherArray().get(0).getDescription() + "\n"
+                        +"Temperature: " + currentWeather.getMain().getTempMax()+"\n"
+                        +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
+                        +"City, Country: " + currentWeather.getName() + ", " + currentWeather.getSys().getCountry()
+                        );
+            }
+
+            @Override
+            public void onFailure(Throwable throwable) {
+                Log.v(TAG, throwable.getMessage());
+            }
+        });
+
+```
 #### Get current weather by City Geographic Coordinates:
+
+```
+   helper.getCurrentWeatherByGeoCoordinates(5.6037, 0.1870, new OpenWeatherMapHelper.CurrentWeatherCallback() {
+            @Override
+            public void onSuccess(CurrentWeather currentWeather) {
+                Log.v(TAG,
+                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLat() +"\n"
+                        +"Weather Description: " + currentWeather.getWeatherArray().get(0).getDescription() + "\n"
+                        +"Temperature: " + currentWeather.getMain().getTempMax()+"\n"
+                        +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
+                        +"City, Country: " + currentWeather.getName() + ", " + currentWeather.getSys().getCountry()
+                        );
+            }
+
+            @Override
+            public void onFailure(Throwable throwable) {
+                Log.v(TAG, throwable.getMessage());
+            }
+        });
+
+```
 #### Get current weather by City Zip Code:
+```
+helper.getCurrentWeatherByZipCode("90003", new OpenWeatherMapHelper.CurrentWeatherCallback() {
+            @Override
+            public void onSuccess(CurrentWeather currentWeather) {
+                Log.v(TAG,
+                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLat() +"\n"
+                        +"Weather Description: " + currentWeather.getWeatherArray().get(0).getDescription() + "\n"
+                        +"Temperature: " + currentWeather.getMain().getTempMax()+"\n"
+                        +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
+                        +"City, Country: " + currentWeather.getName() + ", " + currentWeather.getSys().getCountry()
+                        );
+            }
+
+            @Override
+            public void onFailure(Throwable throwable) {
+                Log.v(TAG, throwable.getMessage());
+            }
+        });
+
+```
