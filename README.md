@@ -1,6 +1,6 @@
 ## OpenWeatherMap-Java-Library
 
-**You need an APPID to use the OpenWeatherMap API. Head on over to their [website](http://openweathermap.org/) if you don't already have one.**
+**You need an API Key to use the OpenWeatherMap API. Head on over to their [website](http://openweathermap.org/) if you don't already have one.**
 
 
 ## Download
@@ -31,10 +31,10 @@ compile 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:v1.0.0'
 ``` java 
 OpenWeatherMapHelper helper = new OpenWeatherMapHelper();
 ```
-#### Set your APPID (Required) 
+#### Set your API Key (Required) 
 
 ``` java 
-helper.setAppId(getString(R.string.OPEN_WEATHER_MAP_APP_ID));
+helper.setApiKey(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
 ```
 
 #### Set your Units (Optional, fahrenheit by default) 
