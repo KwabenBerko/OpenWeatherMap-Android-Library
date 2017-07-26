@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
         //Set API KEY
         helper.setApiKey(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
-
         //Set Units
         helper.setUnits("imperial");
 

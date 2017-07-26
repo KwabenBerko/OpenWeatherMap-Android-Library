@@ -49,7 +49,7 @@ public class OpenWeatherMapHelper {
 
 
     private Throwable NoAppIdErrMessage() {
-        return new Throwable("UnAuthorized. Please set your OpenWeatherMap Application Id by using the setAppId method.");
+        return new Throwable("UnAuthorized. Please set your OpenWeatherMap App Key by using the setApiKey method.");
     }
 
 
