@@ -1,4 +1,4 @@
-## OpenWeatherMap-Java-Library
+## OpenWeatherMap-Android-Library
 
 **You need an API Key to use the OpenWeatherMap API. Head on over to their [website](http://openweathermap.org/) if you don't already have one.**
 
