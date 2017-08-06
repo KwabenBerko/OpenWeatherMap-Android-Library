@@ -1,4 +1,4 @@
-package com.kwabenaberko.openweathermaplib.models;
+package com.kwabenaberko.openweathermaplib.models.common;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -27,6 +27,9 @@ public class Main {
 
     @SerializedName("grnd_level")
     private double grndLevel;
+
+    @SerializedName("temp_kf")
+    private double tempKf;
 
 
     public double getTemp() {
@@ -83,5 +86,13 @@ public class Main {
 
     public void setGrndLevel(double grndLevel) {
         this.grndLevel = grndLevel;
+    }
+
+    public double getTempKf() {
+        return tempKf;
+    }
+
+    public void setTempKf(double tempKf) {
+        this.tempKf = tempKf;
     }
 }

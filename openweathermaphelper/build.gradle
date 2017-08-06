@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.github.KwabenBerkogit'
+group = 'com.github.KwabenBerko'
+
 
 android {
     compileSdkVersion 26
@@ -33,3 +34,4 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     testCompile 'junit:junit:4.12'
 }
+

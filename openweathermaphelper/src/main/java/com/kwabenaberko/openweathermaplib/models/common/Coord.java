@@ -1,4 +1,4 @@
-package com.kwabenaberko.openweathermaplib.models;
+package com.kwabenaberko.openweathermaplib.models.common;
 
 import com.google.gson.annotations.SerializedName;
 

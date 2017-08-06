@@ -1,4 +1,4 @@
-package com.kwabenaberko.openweathermaplib.models;
+package com.kwabenaberko.openweathermaplib.models.common;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -18,6 +18,9 @@ public class Sys {
 
     @SerializedName("sunset")
     private Long sunset;
+
+    @SerializedName("pod")
+    private String pod;
 
     public double getMessage() {
         return message;
@@ -49,5 +52,13 @@ public class Sys {
 
     public void setSunset(Long sunset) {
         this.sunset = sunset;
+    }
+
+    public String getPod() {
+        return pod;
+    }
+
+    public void setPod(String pod) {
+        this.pod = pod;
     }
 }

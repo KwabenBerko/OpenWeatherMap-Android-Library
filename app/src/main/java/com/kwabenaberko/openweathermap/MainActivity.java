@@ -3,10 +3,11 @@ package com.kwabenaberko.openweathermap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
+import com.kwabenaberko.openweathermaplib.Units;
 import com.kwabenaberko.openweathermaplib.implementation.OpenWeatherMapHelper;
-import com.kwabenaberko.openweathermaplib.models.CurrentWeather;
+import com.kwabenaberko.openweathermaplib.models.currentweather.CurrentWeather;
+import com.kwabenaberko.openweathermaplib.models.threehourforecast.ThreeHourForecast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         //Set API KEY
         helper.setApiKey(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
         //Set Units
-        helper.setUnits("imperial");
+        helper.setUnits(Units.IMPERIAL);
 
         /*
         This Example Only Shows how to get current weather by city name
@@ -46,5 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.v(TAG, throwable.getMessage());
             }
         });
+
     }
 }
