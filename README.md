@@ -53,7 +53,7 @@ helper.setUnits(Units.IMPERIAL);
 ## Features
 
 
-### Current Weather
+### 1. Current Weather
 #### Get current weather by City Name:
 
 ```java
@@ -140,7 +140,7 @@ helper.getCurrentWeatherByZipCode("90003", new OpenWeatherMapHelper.CurrentWeath
         });
 
 ```
-### 5 day / 3 hour forecast
+### 2. 5 day / 3 hour forecast
 #### Get three hour forecast by City Name:
 #### Get three hour forecast by City ID:
 #### Get three hour forecast by Geographic Coordinates:
