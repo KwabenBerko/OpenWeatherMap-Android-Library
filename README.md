@@ -19,7 +19,7 @@ allprojects {
 #### Step 2 : Download via ```Gradle```:
 
 ```java
-compile 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:v1.0.0'
+compile 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:v1.1.0'
 ```
 
 **Note: Remember to include the INTERNET permission to your manifest file**
@@ -40,14 +40,14 @@ helper.setApiKey(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
 #### Set your Units (Optional, fahrenheit by default) 
 
 ``` java 
-helper.setUnits("imperial");
+helper.setUnits(Units.IMPERIAL);
 ```
 
 ##### Unit Options: 
 
-1. ```"imperial"```
+1. ```Units.IMPERIAL```
 
-2. ```"fahrenheit"```
+2. ```Units.FAHRENHEIT```
 
 
 ## Features
@@ -140,7 +140,12 @@ helper.getCurrentWeatherByZipCode("90003", new OpenWeatherMapHelper.CurrentWeath
         });
 
 ```
+### 5 day / 3 hour forecast
+#### Get three hour forecast by City Name:
+#### Get three hour forecast by City ID:
+#### Get three hour forecast by Geographic Coordinates:
+#### Get three hour forecast by Zip Code:
+
 
 ### Upcoming Features
-1. 5 day / 3 hour forecast
-2. 16 day / daily forecast 
+1. 16 day / daily forecast 
