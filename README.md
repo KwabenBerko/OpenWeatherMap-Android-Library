@@ -63,7 +63,7 @@ helper.getCurrentWeatherByCityName("Accra", new OpenWeatherMapHelper.CurrentWeat
                 Log.v(TAG,
                         "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLat() +"\n"
                         +"Weather Description: " + currentWeather.getWeatherArray().get(0).getDescription() + "\n"
-                        +"Temperature: " + currentWeather.getMain().getTempMax()+"\n"
+                        +"Max Temperature: " + currentWeather.getMain().getTempMax()+"\n"
                         +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
                         +"City, Country: " + currentWeather.getName() + ", " + currentWeather.getSys().getCountry()
                         );
@@ -84,7 +84,7 @@ helper.getCurrentWeatherByCityName("Accra", new OpenWeatherMapHelper.CurrentWeat
                 Log.v(TAG,
                         "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLat() +"\n"
                         +"Weather Description: " + currentWeather.getWeatherArray().get(0).getDescription() + "\n"
-                        +"Temperature: " + currentWeather.getMain().getTempMax()+"\n"
+                        +"Max Temperature: " + currentWeather.getMain().getTempMax()+"\n"
                         +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
                         +"City, Country: " + currentWeather.getName() + ", " + currentWeather.getSys().getCountry()
                         );
@@ -106,7 +106,7 @@ helper.getCurrentWeatherByCityName("Accra", new OpenWeatherMapHelper.CurrentWeat
                 Log.v(TAG,
                         "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLat() +"\n"
                         +"Weather Description: " + currentWeather.getWeatherArray().get(0).getDescription() + "\n"
-                        +"Temperature: " + currentWeather.getMain().getTempMax()+"\n"
+                        +"Max Temperature: " + currentWeather.getMain().getTempMax()+"\n"
                         +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
                         +"City, Country: " + currentWeather.getName() + ", " + currentWeather.getSys().getCountry()
                         );
@@ -127,7 +127,7 @@ helper.getCurrentWeatherByZipCode("90003", new OpenWeatherMapHelper.CurrentWeath
                 Log.v(TAG,
                         "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLat() +"\n"
                         +"Weather Description: " + currentWeather.getWeatherArray().get(0).getDescription() + "\n"
-                        +"Temperature: " + currentWeather.getMain().getTempMax()+"\n"
+                        +"Max Temperature: " + currentWeather.getMain().getTempMax()+"\n"
                         +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
                         +"City, Country: " + currentWeather.getName() + ", " + currentWeather.getSys().getCountry()
                         );
@@ -142,9 +142,96 @@ helper.getCurrentWeatherByZipCode("90003", new OpenWeatherMapHelper.CurrentWeath
 ```
 ### (2) 5 day / 3 hour forecast
 #### Get three hour forecast by City Name:
+```java
+helper.getThreeHourForecastByCityName("Pretoria", new OpenWeatherMapHelper.ThreeHourForecastCallback() {
+            @Override
+            public void onSuccess(ThreeHourForecast threeHourForecast) {
+                Log.v(TAG, 
+                        "City/Country: "+ threeHourForecast.getCity().getName() + "/" + threeHourForecast.getCity().getCountry() +"\n"
+                       +"Forecast Array Count: " + threeHourForecast.getCnt() +"\n"
+                       //For this example, we are logging details of only the first forecast object in the forecasts array
+                       +"First Forecast Date in Milliseconds: " + threeHourForecast.getThreeHourWeatherArray().get(0).getDt() +"\n"
+                       +"First Forecast Weather Description: " + threeHourForecast.getThreeHourWeatherArray().get(0).getWeatherArray().get(0).getDescription()+ "\n"
+                       +"First Forecast Max Temperature: " + threeHourForecast.getThreeHourWeatherArray().get(0).getMain().getTempMax()+"\n"
+                       +"First Forecast Wind Speed: " + threeHourForecast.getThreeHourWeatherArray().get(0).getWind().getSpeed() + "\n"
+                );
+            }
+
+            @Override
+            public void onFailure(Throwable throwable) {
+                Log.v(TAG, throwable.getMessage());
+            }
+        });
+```
 #### Get three hour forecast by City ID:
+```java
+helper.getThreeHourForecastByCityID("524901", new OpenWeatherMapHelper.ThreeHourForecastCallback() {
+            @Override
+            public void onSuccess(ThreeHourForecast threeHourForecast) {
+                Log.v(TAG,
+                        "City/Country: "+ threeHourForecast.getCity().getName() + "/" + threeHourForecast.getCity().getCountry() +"\n"
+                       +"Forecast Array Count: " + threeHourForecast.getCnt() +"\n"
+                       //For this example, we are logging details of only the first forecast object in the forecasts array
+                       +"First Forecast Date in Milliseconds: " + threeHourForecast.getThreeHourWeatherArray().get(0).getDt() +"\n"
+                       +"First Forecast Weather Description: " + threeHourForecast.getThreeHourWeatherArray().get(0).getWeatherArray().get(0).getDescription()+ "\n"
+                       +"First Forecast Max Temperature: " + threeHourForecast.getThreeHourWeatherArray().get(0).getMain().getTempMax()+"\n"
+                       +"First Forecast Wind Speed: " + threeHourForecast.getThreeHourWeatherArray().get(0).getWind().getSpeed() + "\n"
+                );
+            }
+
+            @Override
+            public void onFailure(Throwable throwable) {
+                Log.v(TAG, throwable.getMessage());
+            }
+        });
+
+```
 #### Get three hour forecast by Geographic Coordinates:
+```java
+helper.getThreeHourForecastByGeoCoordinates(6.5244,3.3792, new OpenWeatherMapHelper.ThreeHourForecastCallback() {
+            @Override
+            public void onSuccess(ThreeHourForecast threeHourForecast) {
+                Log.v(TAG,
+                        "City/Country: "+ threeHourForecast.getCity().getName() + "/" + threeHourForecast.getCity().getCountry() +"\n"
+                       +"Forecast Array Count: " + threeHourForecast.getCnt() +"\n"
+                       //For this example, we are logging details of only the first forecast object in the forecasts array
+                       +"First Forecast Date in Milliseconds: " + threeHourForecast.getThreeHourWeatherArray().get(0).getDt() +"\n"
+                       +"First Forecast Weather Description: " + threeHourForecast.getThreeHourWeatherArray().get(0).getWeatherArray().get(0).getDescription()+ "\n"
+                       +"First Forecast Max Temperature: " + threeHourForecast.getThreeHourWeatherArray().get(0).getMain().getTempMax()+"\n"
+                       +"First Forecast Wind Speed: " + threeHourForecast.getThreeHourWeatherArray().get(0).getWind().getSpeed() + "\n"
+                );
+            }
+
+            @Override
+            public void onFailure(Throwable throwable) {
+                Log.v(TAG, throwable.getMessage());
+            }
+        });
+```
 #### Get three hour forecast by Zip Code:
+```java
+helper.getThreeHourForecastByZipCode("94040", new OpenWeatherMapHelper.ThreeHourForecastCallback() {
+            @Override
+            public void onSuccess(ThreeHourForecast threeHourForecast) {
+                Log.v(TAG,
+                        "City/Country: "+ threeHourForecast.getCity().getName() + "/" + threeHourForecast.getCity().getCountry() +"\n"
+                       +"Forecast Array Count: " + threeHourForecast.getCnt() +"\n"
+                       //For this example, we are logging details of only the first forecast object in the forecasts array
+                       +"First Forecast Date in Milliseconds: " + threeHourForecast.getThreeHourWeatherArray().get(0).getDt() +"\n"
+                       +"First Forecast Weather Description: " + threeHourForecast.getThreeHourWeatherArray().get(0).getWeatherArray().get(0).getDescription()+ "\n"
+                       +"First Forecast Max Temperature: " + threeHourForecast.getThreeHourWeatherArray().get(0).getMain().getTempMax()+"\n"
+                       +"First Forecast Wind Speed: " + threeHourForecast.getThreeHourWeatherArray().get(0).getWind().getSpeed() + "\n"
+                );
+            }
+
+            @Override
+            public void onFailure(Throwable throwable) {
+                Log.v(TAG, throwable.getMessage());
+            }
+        });
+
+```
+
 
 
 ### Upcoming Features
