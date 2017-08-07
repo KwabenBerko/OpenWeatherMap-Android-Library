@@ -234,5 +234,7 @@ helper.getThreeHourForecastByZipCode("94040", new OpenWeatherMapHelper.ThreeHour
 
 
 
-### Upcoming Features
+
+
+### Upcoming Feature
 1. 16 day / daily forecast 
