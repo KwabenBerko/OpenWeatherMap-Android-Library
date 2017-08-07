@@ -150,7 +150,7 @@ helper.getThreeHourForecastByCityName("Pretoria", new OpenWeatherMapHelper.Three
                         "City/Country: "+ threeHourForecast.getCity().getName() + "/" + threeHourForecast.getCity().getCountry() +"\n"
                        +"Forecast Array Count: " + threeHourForecast.getCnt() +"\n"
                        //For this example, we are logging details of only the first forecast object in the forecasts array
-                       +"First Forecast Date in Milliseconds: " + threeHourForecast.getThreeHourWeatherArray().get(0).getDt() +"\n"
+                       +"First Forecast Date Timestamp: " + threeHourForecast.getThreeHourWeatherArray().get(0).getDt() +"\n"
                        +"First Forecast Weather Description: " + threeHourForecast.getThreeHourWeatherArray().get(0).getWeatherArray().get(0).getDescription()+ "\n"
                        +"First Forecast Max Temperature: " + threeHourForecast.getThreeHourWeatherArray().get(0).getMain().getTempMax()+"\n"
                        +"First Forecast Wind Speed: " + threeHourForecast.getThreeHourWeatherArray().get(0).getWind().getSpeed() + "\n"
@@ -172,7 +172,7 @@ helper.getThreeHourForecastByCityID("524901", new OpenWeatherMapHelper.ThreeHour
                         "City/Country: "+ threeHourForecast.getCity().getName() + "/" + threeHourForecast.getCity().getCountry() +"\n"
                        +"Forecast Array Count: " + threeHourForecast.getCnt() +"\n"
                        //For this example, we are logging details of only the first forecast object in the forecasts array
-                       +"First Forecast Date in Milliseconds: " + threeHourForecast.getThreeHourWeatherArray().get(0).getDt() +"\n"
+                       +"First Forecast Date Timestamp: " + threeHourForecast.getThreeHourWeatherArray().get(0).getDt() +"\n"
                        +"First Forecast Weather Description: " + threeHourForecast.getThreeHourWeatherArray().get(0).getWeatherArray().get(0).getDescription()+ "\n"
                        +"First Forecast Max Temperature: " + threeHourForecast.getThreeHourWeatherArray().get(0).getMain().getTempMax()+"\n"
                        +"First Forecast Wind Speed: " + threeHourForecast.getThreeHourWeatherArray().get(0).getWind().getSpeed() + "\n"
@@ -195,7 +195,7 @@ helper.getThreeHourForecastByGeoCoordinates(6.5244,3.3792, new OpenWeatherMapHel
                         "City/Country: "+ threeHourForecast.getCity().getName() + "/" + threeHourForecast.getCity().getCountry() +"\n"
                        +"Forecast Array Count: " + threeHourForecast.getCnt() +"\n"
                        //For this example, we are logging details of only the first forecast object in the forecasts array
-                       +"First Forecast Date in Milliseconds: " + threeHourForecast.getThreeHourWeatherArray().get(0).getDt() +"\n"
+                       +"First Forecast Date Timestamp: " + threeHourForecast.getThreeHourWeatherArray().get(0).getDt() +"\n"
                        +"First Forecast Weather Description: " + threeHourForecast.getThreeHourWeatherArray().get(0).getWeatherArray().get(0).getDescription()+ "\n"
                        +"First Forecast Max Temperature: " + threeHourForecast.getThreeHourWeatherArray().get(0).getMain().getTempMax()+"\n"
                        +"First Forecast Wind Speed: " + threeHourForecast.getThreeHourWeatherArray().get(0).getWind().getSpeed() + "\n"
@@ -217,7 +217,7 @@ helper.getThreeHourForecastByZipCode("94040", new OpenWeatherMapHelper.ThreeHour
                         "City/Country: "+ threeHourForecast.getCity().getName() + "/" + threeHourForecast.getCity().getCountry() +"\n"
                        +"Forecast Array Count: " + threeHourForecast.getCnt() +"\n"
                        //For this example, we are logging details of only the first forecast object in the forecasts array
-                       +"First Forecast Date in Milliseconds: " + threeHourForecast.getThreeHourWeatherArray().get(0).getDt() +"\n"
+                       +"First Forecast Date Timestamp: " + threeHourForecast.getThreeHourWeatherArray().get(0).getDt() +"\n"
                        +"First Forecast Weather Description: " + threeHourForecast.getThreeHourWeatherArray().get(0).getWeatherArray().get(0).getDescription()+ "\n"
                        +"First Forecast Max Temperature: " + threeHourForecast.getThreeHourWeatherArray().get(0).getMain().getTempMax()+"\n"
                        +"First Forecast Wind Speed: " + threeHourForecast.getThreeHourWeatherArray().get(0).getWind().getSpeed() + "\n"
