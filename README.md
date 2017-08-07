@@ -1,4 +1,4 @@
-## OpenWeatherMap-Java-Library
+## OpenWeatherMap-Android-Library
 
 **You need an API Key to use the OpenWeatherMap API. Head on over to their [website](http://openweathermap.org/) if you don't already have one.**
 
@@ -97,7 +97,7 @@ helper.getCurrentWeatherByCityName("Accra", new OpenWeatherMapHelper.CurrentWeat
         });
 
 ```
-#### Get current weather by City Geographic Coordinates:
+#### Get current weather by Geographic Coordinates:
 
 ```java
    helper.getCurrentWeatherByGeoCoordinates(5.6037, 0.1870, new OpenWeatherMapHelper.CurrentWeatherCallback() {
@@ -119,7 +119,7 @@ helper.getCurrentWeatherByCityName("Accra", new OpenWeatherMapHelper.CurrentWeat
         });
 
 ```
-#### Get current weather by City Zip Code:
+#### Get current weather by Zip Code:
 ```java
 helper.getCurrentWeatherByZipCode("90003", new OpenWeatherMapHelper.CurrentWeatherCallback() {
             @Override
