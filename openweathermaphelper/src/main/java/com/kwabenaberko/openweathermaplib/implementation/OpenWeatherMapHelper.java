@@ -44,7 +44,7 @@ public class OpenWeatherMapHelper {
         openWeatherMapService = OpenWeatherMapClient.getClient().create(OpenWeatherMapService.class);
         options = new HashMap<>();
         options.put("APPID", "");
-        options.put("Units", Units.FAHRENHEIT);
+        options.put("units", Units.FAHRENHEIT);
     }
 
     //METHODS TO SETUP APPLICATION
@@ -52,7 +52,7 @@ public class OpenWeatherMapHelper {
         options.put("APPID", appId);
     }
     public void setUnits(String units){
-        options.put("Units", units);
+        options.put("units", units);
     }
 
 
