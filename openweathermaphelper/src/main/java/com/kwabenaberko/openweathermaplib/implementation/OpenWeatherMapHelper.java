@@ -1,13 +1,11 @@
 package com.kwabenaberko.openweathermaplib.implementation;
 
-import android.inputmethodservice.AbstractInputMethodService;
 import android.support.annotation.NonNull;
 
-import com.kwabenaberko.openweathermaplib.Units;
+import com.kwabenaberko.openweathermaplib.models.currentweather.CurrentWeather;
 import com.kwabenaberko.openweathermaplib.models.threehourforecast.ThreeHourForecast;
 import com.kwabenaberko.openweathermaplib.network.OpenWeatherMapClient;
 import com.kwabenaberko.openweathermaplib.network.OpenWeatherMapService;
-import com.kwabenaberko.openweathermaplib.models.currentweather.CurrentWeather;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -44,7 +42,6 @@ public class OpenWeatherMapHelper {
         openWeatherMapService = OpenWeatherMapClient.getClient().create(OpenWeatherMapService.class);
         options = new HashMap<>();
         options.put("APPID", "");
-        options.put("units", Units.FAHRENHEIT);
     }
 
     //METHODS TO SETUP APPLICATION

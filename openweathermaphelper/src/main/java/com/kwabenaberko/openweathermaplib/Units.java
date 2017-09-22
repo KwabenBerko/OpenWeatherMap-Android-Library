@@ -6,5 +6,5 @@ package com.kwabenaberko.openweathermaplib;
 
 public class Units {
     public static final String IMPERIAL = "imperial";
-    public static final String FAHRENHEIT = "fahrenheit";
+    public static final String METRIC = "metric";
 }

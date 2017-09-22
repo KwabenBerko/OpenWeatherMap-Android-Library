@@ -1,13 +1,12 @@
 package com.kwabenaberko.openweathermap;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.kwabenaberko.openweathermaplib.Units;
 import com.kwabenaberko.openweathermaplib.implementation.OpenWeatherMapHelper;
 import com.kwabenaberko.openweathermaplib.models.currentweather.CurrentWeather;
-import com.kwabenaberko.openweathermaplib.models.threehourforecast.ThreeHourForecast;
 
 public class MainActivity extends AppCompatActivity {
 
