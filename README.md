@@ -37,7 +37,7 @@ OpenWeatherMapHelper helper = new OpenWeatherMapHelper();
 helper.setApiKey(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
 ```
 
-#### Set your Units (Optional, fahrenheit by default) 
+#### Set your Units (Optional, Kelvin by default) 
 
 ``` java 
 helper.setUnits(Units.IMPERIAL);
@@ -45,9 +45,9 @@ helper.setUnits(Units.IMPERIAL);
 
 ##### Unit Options: 
 
-1. ```Units.IMPERIAL```
+1. ```Units.IMPERIAL (Fahrenheit)```
 
-2. ```Units.FAHRENHEIT```
+2. ```Units.METRIC (Celsius)```
 
 
 ## Features
