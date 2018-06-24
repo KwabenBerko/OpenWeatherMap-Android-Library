@@ -61,7 +61,7 @@ helper.getCurrentWeatherByCityName("Accra", new OpenWeatherMapHelper.CurrentWeat
             @Override
             public void onSuccess(CurrentWeather currentWeather) {
                 Log.v(TAG,
-                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLat() +"\n"
+                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLon()+"\n"
                         +"Weather Description: " + currentWeather.getWeatherArray().get(0).getDescription() + "\n"
                         +"Max Temperature: " + currentWeather.getMain().getTempMax()+"\n"
                         +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
@@ -82,7 +82,7 @@ helper.getCurrentWeatherByCityName("Accra", new OpenWeatherMapHelper.CurrentWeat
             @Override
             public void onSuccess(CurrentWeather currentWeather) {
                 Log.v(TAG,
-                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLat() +"\n"
+                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLon() +"\n"
                         +"Weather Description: " + currentWeather.getWeatherArray().get(0).getDescription() + "\n"
                         +"Max Temperature: " + currentWeather.getMain().getTempMax()+"\n"
                         +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
@@ -104,7 +104,7 @@ helper.getCurrentWeatherByCityName("Accra", new OpenWeatherMapHelper.CurrentWeat
             @Override
             public void onSuccess(CurrentWeather currentWeather) {
                 Log.v(TAG,
-                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLat() +"\n"
+                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLon() +"\n"
                         +"Weather Description: " + currentWeather.getWeatherArray().get(0).getDescription() + "\n"
                         +"Max Temperature: " + currentWeather.getMain().getTempMax()+"\n"
                         +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
@@ -125,7 +125,7 @@ helper.getCurrentWeatherByZipCode("90003", new OpenWeatherMapHelper.CurrentWeath
             @Override
             public void onSuccess(CurrentWeather currentWeather) {
                 Log.v(TAG,
-                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLat() +"\n"
+                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLon() +"\n"
                         +"Weather Description: " + currentWeather.getWeatherArray().get(0).getDescription() + "\n"
                         +"Max Temperature: " + currentWeather.getMain().getTempMax()+"\n"
                         +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"

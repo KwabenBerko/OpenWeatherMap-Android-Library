@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         //Set API KEY
         helper.setApiKey(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
         //Set Units
-        helper.setUnits(Units.IMPERIAL);
+        helper.setUnits(Units.METRIC);
 
         /*
         This Example Only Shows how to get current weather by city name
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSuccess(CurrentWeather currentWeather) {
                 Log.v(TAG,
-                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLat() +"\n"
+                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLon() +"\n"
                                 +"Weather Description: " + currentWeather.getWeatherArray().get(0).getDescription() + "\n"
                                 +"Temperature: " + currentWeather.getMain().getTempMax()+"\n"
                                 +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
