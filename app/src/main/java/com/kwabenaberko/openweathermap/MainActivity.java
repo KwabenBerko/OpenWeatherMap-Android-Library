@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import com.kwabenaberko.openweathermaplib.Lang;
 import com.kwabenaberko.openweathermaplib.Units;
 import com.kwabenaberko.openweathermaplib.implementation.OpenWeatherMapHelper;
 import com.kwabenaberko.openweathermaplib.models.currentweather.CurrentWeather;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         helper.setApiKey(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
         //Set Units
         helper.setUnits(Units.METRIC);
+        //Set lang
+        helper.setLang(Lang.ENGLISH);
 
         /*
         This Example Only Shows how to get current weather by city name
