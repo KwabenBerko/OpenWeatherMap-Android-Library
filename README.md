@@ -49,6 +49,11 @@ helper.setUnits(Units.IMPERIAL);
 
 2. ```Units.METRIC (Celsius)```
 
+#### Set language (default : en)
+
+``` java
+helper.setLang(Lang.ENGLISH);
+```
 
 ## Features
 

@@ -52,6 +52,10 @@ public class OpenWeatherMapHelper {
         options.put("units", units);
     }
 
+    public void setLang(String lang) {
+        options.put("lang", lang);
+    }
+
 
     private Throwable NoAppIdErrMessage() {
         return new Throwable("UnAuthorized. Please set a valid OpenWeatherMap API KEY by using the setApiKey method.");
