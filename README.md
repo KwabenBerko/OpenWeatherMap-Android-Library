@@ -1,4 +1,7 @@
-## OpenWeatherMap-Android-Library
+
+## OpenWeatherMap-Android-Library  
+[![](https://jitpack.io/v/KwabenBerko/OpenWeatherMap-Android-Library.svg)](https://jitpack.io/#KwabenBerko/OpenWeatherMap-Android-Library)
+
 
 **You need an API Key to use the OpenWeatherMap API. Head on over to their [website](http://openweathermap.org/) if you don't already have one.**
 
@@ -19,7 +22,7 @@ allprojects {
 #### Step 2 : Download via ```Gradle```:
 
 ```java
-compile 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:v1.1.1'
+compile 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:v1.1.2'
 ```
 
 **Note: Remember to include the INTERNET permission to your manifest file**
