@@ -40,7 +40,7 @@ OpenWeatherMapHelper helper = new OpenWeatherMapHelper();
 helper.setApiKey(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
 ```
 
-#### Set your Units (Optional, Kelvin by default) 
+#### Set your Units (Optional, Standard by default) 
 
 ``` java 
 helper.setUnits(Units.IMPERIAL);
