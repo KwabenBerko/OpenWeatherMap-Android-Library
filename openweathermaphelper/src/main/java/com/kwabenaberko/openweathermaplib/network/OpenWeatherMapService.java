@@ -23,7 +23,7 @@ public interface OpenWeatherMapService {
     Call<CurrentWeather> getCurrentWeatherByCityID(@QueryMap Map<String, String> options);
 
     @GET("/data/2.5/weather")
-    Call<CurrentWeather> getCurrentWeatherByGeoCoordinates(@QueryMap Map<String, String> optionse);
+    Call<CurrentWeather> getCurrentWeatherByGeoCoordinates(@QueryMap Map<String, String> options);
 
     @GET("/data/2.5/weather")
     Call<CurrentWeather> getCurrentWeatherByZipCode(@QueryMap Map<String, String> options);

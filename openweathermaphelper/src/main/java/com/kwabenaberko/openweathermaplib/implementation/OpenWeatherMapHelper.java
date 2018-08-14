@@ -88,7 +88,7 @@ public class OpenWeatherMapHelper {
         openWeatherMapService.getCurrentWeatherByCityName(options).enqueue(new Callback<CurrentWeather>() {
             @Override
             public void onResponse(@NonNull Call<CurrentWeather> call, @NonNull Response<CurrentWeather> response) {
-                HandleCurrentWeatherResponse(response, callback);
+                handleCurrentWeatherResponse(response, callback);
             }
 
             @Override
@@ -104,7 +104,7 @@ public class OpenWeatherMapHelper {
         openWeatherMapService.getCurrentWeatherByCityID(options).enqueue(new Callback<CurrentWeather>() {
             @Override
             public void onResponse(Call<CurrentWeather> call, Response<CurrentWeather> response) {
-                HandleCurrentWeatherResponse(response, callback);
+                handleCurrentWeatherResponse(response, callback);
             }
 
             @Override
@@ -122,7 +122,7 @@ public class OpenWeatherMapHelper {
         openWeatherMapService.getCurrentWeatherByGeoCoordinates(options).enqueue(new Callback<CurrentWeather>() {
             @Override
             public void onResponse(Call<CurrentWeather> call, Response<CurrentWeather> response) {
-                HandleCurrentWeatherResponse(response, callback);
+                handleCurrentWeatherResponse(response, callback);
             }
 
             @Override
@@ -139,7 +139,7 @@ public class OpenWeatherMapHelper {
         openWeatherMapService.getCurrentWeatherByZipCode(options).enqueue(new Callback<CurrentWeather>() {
             @Override
             public void onResponse(Call<CurrentWeather> call, Response<CurrentWeather> response) {
-                HandleCurrentWeatherResponse(response, callback);
+                handleCurrentWeatherResponse(response, callback);
             }
 
             @Override
@@ -149,7 +149,7 @@ public class OpenWeatherMapHelper {
         });
     }
 
-    private void HandleCurrentWeatherResponse(Response<CurrentWeather> response, CurrentWeatherCallback callback){
+    private void handleCurrentWeatherResponse(Response<CurrentWeather> response, CurrentWeatherCallback callback){
         if (response.code() == HttpURLConnection.HTTP_OK){
             callback.onSuccess(response.body());
         }
