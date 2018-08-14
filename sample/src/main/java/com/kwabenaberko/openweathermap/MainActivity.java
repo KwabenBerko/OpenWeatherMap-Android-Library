@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         //Set Units
         helper.setUnits(Units.METRIC);
         //Set lang
-        helper.setLang(Lang.ENGLISH);
+        helper.setLang(Lang.GERMAN);
 
         /*
         This Example Only Shows how to get current weather by city name

@@ -1,1 +1,1 @@
-include ':app', ':openweathermaphelper'
+include ':sample', ':openweathermaphelper'
