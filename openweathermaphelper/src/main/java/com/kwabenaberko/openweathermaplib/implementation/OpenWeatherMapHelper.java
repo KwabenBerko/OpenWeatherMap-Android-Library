@@ -73,7 +73,7 @@ public class OpenWeatherMapHelper {
         }
 
         if (throwable == null){
-            throwable = new Throwable("An unexpected error occurred");
+            throwable = new Throwable("An unexpected error occurred.");
         }
 
 
