@@ -48,7 +48,7 @@ public class OpenWeatherMapHelper {
     public OpenWeatherMapHelper(String apiKey){
         openWeatherMapService = OpenWeatherMapClient.getClient().create(OpenWeatherMapService.class);
         options = new HashMap<>();
-        options.put(APPID, apiKey != null ? apiKey : "");
+        options.put(APPID, apiKey == null ? "" : apiKey);
     }
 
 
