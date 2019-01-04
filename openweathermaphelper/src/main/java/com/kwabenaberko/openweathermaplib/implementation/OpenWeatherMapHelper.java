@@ -42,9 +42,7 @@ public class OpenWeatherMapHelper {
 
     @Deprecated
     public OpenWeatherMapHelper(){
-        openWeatherMapService = OpenWeatherMapClient.getClient().create(OpenWeatherMapService.class);
-        options = new HashMap<>();
-        options.put(APPID, "");
+        this("");
     }
 
     public OpenWeatherMapHelper(String apiKey){
@@ -52,6 +50,7 @@ public class OpenWeatherMapHelper {
         options = new HashMap<>();
         options.put(APPID, apiKey != null ? apiKey : "");
     }
+
 
     //SETUP METHODS
     @Deprecated
