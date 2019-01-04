@@ -1,4 +1,4 @@
-package com.kwabenaberko.openweathermaplib;
+package com.kwabenaberko.openweathermaplib.constants;
 
 /**
  * Created by Kwabena Berko on 8/6/2017.
