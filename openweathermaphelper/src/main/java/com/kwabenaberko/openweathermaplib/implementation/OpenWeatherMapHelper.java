@@ -27,6 +27,15 @@ import retrofit2.Response;
 
 public class OpenWeatherMapHelper {
 
+    private static final String APPID = "appId";
+    private static final String UNITS = "units";
+    private static final String LANGUAGE = "lang";
+    private static final String QUERY = "q";
+    private static final String CITY_ID = "id";
+    private static final String LATITUDE = "lat";
+    private static final String LONGITUDE = "lon";
+    private static final String ZIP_CODE = "zip";
+
     private OpenWeatherMapService openWeatherMapService;
     private Map<String, String> options;
 
@@ -34,19 +43,18 @@ public class OpenWeatherMapHelper {
     public OpenWeatherMapHelper(){
         openWeatherMapService = OpenWeatherMapClient.getClient().create(OpenWeatherMapService.class);
         options = new HashMap<>();
-        options.put("APPID", "");
+        options.put(APPID, "");
     }
 
-    //METHODS TO SETUP APPLICATION
+    //SETUP METHODS
     public void setApiKey(String appId){
-        options.put("APPID", appId);
+        options.put(APPID, appId);
     }
     public void setUnits(String units){
-        options.put("units", units);
+        options.put(UNITS, units);
     }
-
     public void setLang(String lang) {
-        options.put("lang", lang);
+        options.put(LANGUAGE, lang);
     }
 
 
@@ -65,7 +73,7 @@ public class OpenWeatherMapHelper {
         }
 
         if (throwable == null){
-            throwable = new Throwable("An error occured");
+            throwable = new Throwable("An unexpected error occurred");
         }
 
 
@@ -77,7 +85,7 @@ public class OpenWeatherMapHelper {
 
     //GET CURRENT WEATHER BY CITY NAME
     public void getCurrentWeatherByCityName(String city, final CurrentWeatherCallback callback){
-        options.put("q", city);
+        options.put(QUERY, city);
         openWeatherMapService.getCurrentWeatherByCityName(options).enqueue(new Callback<CurrentWeather>() {
             @Override
             public void onResponse(@NonNull Call<CurrentWeather> call, @NonNull Response<CurrentWeather> response) {
@@ -93,7 +101,7 @@ public class OpenWeatherMapHelper {
 
     //GET CURRENT WEATHER BY CITY ID
     public void getCurrentWeatherByCityID(String id, final CurrentWeatherCallback callback){
-        options.put("id", id);
+        options.put(CITY_ID, id);
         openWeatherMapService.getCurrentWeatherByCityID(options).enqueue(new Callback<CurrentWeather>() {
             @Override
             public void onResponse(Call<CurrentWeather> call, Response<CurrentWeather> response) {
@@ -110,8 +118,8 @@ public class OpenWeatherMapHelper {
 
     //GET CURRENT WEATHER BY GEOGRAPHIC COORDINATES
     public void getCurrentWeatherByGeoCoordinates(double latitude, double longitude, final CurrentWeatherCallback callback){
-        options.put("lat", String.valueOf(latitude));
-        options.put("lon", String.valueOf(longitude));
+        options.put(LATITUDE, String.valueOf(latitude));
+        options.put(LONGITUDE, String.valueOf(longitude));
         openWeatherMapService.getCurrentWeatherByGeoCoordinates(options).enqueue(new Callback<CurrentWeather>() {
             @Override
             public void onResponse(Call<CurrentWeather> call, Response<CurrentWeather> response) {
@@ -128,7 +136,7 @@ public class OpenWeatherMapHelper {
     //GET CURRENT WEATHER BY ZIP CODE
 
     public void getCurrentWeatherByZipCode(String zipCode, final CurrentWeatherCallback callback){
-        options.put("zip", zipCode);
+        options.put(ZIP_CODE, zipCode);
         openWeatherMapService.getCurrentWeatherByZipCode(options).enqueue(new Callback<CurrentWeather>() {
             @Override
             public void onResponse(Call<CurrentWeather> call, Response<CurrentWeather> response) {
@@ -170,7 +178,7 @@ public class OpenWeatherMapHelper {
 
     //GET THREE HOUR FORECAST BY CITY NAME
     public void getThreeHourForecastByCityName(String city, final ThreeHourForecastCallback callback){
-        options.put("q", city);
+        options.put(QUERY, city);
         openWeatherMapService.getThreeHourForecastByCityName(options)
                 .enqueue(new Callback<ThreeHourForecast>() {
                     @Override
@@ -188,7 +196,7 @@ public class OpenWeatherMapHelper {
 
     //GET THREE HOUR FORECAST BY CITY ID
     public void getThreeHourForecastByCityID(String id, final ThreeHourForecastCallback callback){
-        options.put("id", id);
+        options.put(CITY_ID, id);
         openWeatherMapService.getThreeHourForecastByCityID(options)
                 .enqueue(new Callback<ThreeHourForecast>() {
                     @Override
@@ -206,8 +214,8 @@ public class OpenWeatherMapHelper {
 
     //GET THREE HOUR FORECAST BY GEO C0ORDINATES
     public void getThreeHourForecastByGeoCoordinates(double latitude, double longitude, final ThreeHourForecastCallback callback){
-        options.put("lat", String.valueOf(latitude));
-        options.put("lon", String.valueOf(longitude));
+        options.put(LATITUDE, String.valueOf(latitude));
+        options.put(LONGITUDE, String.valueOf(longitude));
         openWeatherMapService.getThreeHourForecastByGeoCoordinates(options)
                 .enqueue(new Callback<ThreeHourForecast>() {
                     @Override
@@ -225,7 +233,7 @@ public class OpenWeatherMapHelper {
 
     //GET THREE HOUR FORECAST BY ZIP CODE
     public void getThreeHourForecastByZipCode(String zipCode, final ThreeHourForecastCallback callback){
-        options.put("zip", zipCode);
+        options.put(ZIP_CODE, zipCode);
         openWeatherMapService.getThreeHourForecastByZipCode(options)
                 .enqueue(new Callback<ThreeHourForecast>() {
                     @Override
