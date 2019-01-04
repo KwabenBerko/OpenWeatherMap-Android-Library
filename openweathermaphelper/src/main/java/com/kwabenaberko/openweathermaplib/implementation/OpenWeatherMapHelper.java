@@ -40,13 +40,21 @@ public class OpenWeatherMapHelper {
     private Map<String, String> options;
 
 
+    @Deprecated
     public OpenWeatherMapHelper(){
         openWeatherMapService = OpenWeatherMapClient.getClient().create(OpenWeatherMapService.class);
         options = new HashMap<>();
         options.put(APPID, "");
     }
 
+    public OpenWeatherMapHelper(String apiKey){
+        openWeatherMapService = OpenWeatherMapClient.getClient().create(OpenWeatherMapService.class);
+        options = new HashMap<>();
+        options.put(APPID, apiKey != null ? apiKey : "");
+    }
+
     //SETUP METHODS
+    @Deprecated
     public void setApiKey(String appId){
         options.put(APPID, appId);
     }
