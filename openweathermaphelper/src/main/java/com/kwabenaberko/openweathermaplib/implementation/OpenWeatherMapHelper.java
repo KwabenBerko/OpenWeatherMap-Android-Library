@@ -2,6 +2,8 @@ package com.kwabenaberko.openweathermaplib.implementation;
 
 import android.support.annotation.NonNull;
 
+import com.kwabenaberko.openweathermaplib.implementation.callbacks.CurrentWeatherCallback;
+import com.kwabenaberko.openweathermaplib.implementation.callbacks.ThreeHourForecastCallback;
 import com.kwabenaberko.openweathermaplib.models.currentweather.CurrentWeather;
 import com.kwabenaberko.openweathermaplib.models.threehourforecast.ThreeHourForecast;
 import com.kwabenaberko.openweathermaplib.network.OpenWeatherMapClient;
@@ -28,15 +30,6 @@ public class OpenWeatherMapHelper {
     private OpenWeatherMapService openWeatherMapService;
     private Map<String, String> options;
 
-    public interface CurrentWeatherCallback{
-        void onSuccess(CurrentWeather currentWeather);
-        void onFailure(Throwable throwable);
-    }
-
-    public interface ThreeHourForecastCallback{
-        void onSuccess(ThreeHourForecast threeHourForecast);
-        void onFailure(Throwable throwable);
-    }
 
     public OpenWeatherMapHelper(){
         openWeatherMapService = OpenWeatherMapClient.getClient().create(OpenWeatherMapService.class);
