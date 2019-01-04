@@ -15,31 +15,33 @@ import retrofit2.http.QueryMap;
 
 public interface OpenWeatherMapService {
 
+    String URL_PATH = "/data/2.5/weather";
+
     //Current Weather Endpoints start
-    @GET("/data/2.5/weather")
+    @GET(URL_PATH)
     Call<CurrentWeather> getCurrentWeatherByCityName(@QueryMap Map<String, String> options);
 
-    @GET("/data/2.5/weather")
+    @GET(URL_PATH)
     Call<CurrentWeather> getCurrentWeatherByCityID(@QueryMap Map<String, String> options);
 
-    @GET("/data/2.5/weather")
+    @GET(URL_PATH)
     Call<CurrentWeather> getCurrentWeatherByGeoCoordinates(@QueryMap Map<String, String> options);
 
-    @GET("/data/2.5/weather")
+    @GET(URL_PATH)
     Call<CurrentWeather> getCurrentWeatherByZipCode(@QueryMap Map<String, String> options);
 
     //Current Weather Endpoints end
 
     //Three hour forecast endpoints start
-    @GET("/data/2.5/forecast")
+    @GET(URL_PATH)
     Call<ThreeHourForecast> getThreeHourForecastByCityName(@QueryMap Map<String, String> options);
 
-    @GET("/data/2.5/forecast")
+    @GET(URL_PATH)
     Call<ThreeHourForecast> getThreeHourForecastByCityID(@QueryMap Map<String, String> options);
 
-    @GET("/data/2.5/forecast")
+    @GET(URL_PATH)
     Call<ThreeHourForecast> getThreeHourForecastByGeoCoordinates(@QueryMap Map<String, String> options);
 
-    @GET("/data/2.5/forecast")
+    @GET(URL_PATH)
     Call<ThreeHourForecast> getThreeHourForecastByZipCode(@QueryMap Map<String, String> options);
 }

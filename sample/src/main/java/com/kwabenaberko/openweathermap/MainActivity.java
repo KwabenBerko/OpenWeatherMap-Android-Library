@@ -24,15 +24,16 @@ public class MainActivity extends AppCompatActivity {
         //Set API KEY
         helper.setApiKey(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
         //Set Units
-        helper.setUnits(Units.METRIC);
+        helper.setUnits(Units.IMPERIAL);
         //Set lang
-        helper.setLang(Lang.GERMAN);
+        helper.setLang(Lang.ENGLISH);
 
         /*
         This Example Only Shows how to get current weather by city name
         Check the docs for more methods [https://github.com/KwabenBerko/OpenWeatherMap-Android-Library/]
         */
         helper.getCurrentWeatherByCityName("Accra", new OpenWeatherMapHelper.CurrentWeatherCallback() {
+
             @Override
             public void onSuccess(CurrentWeather currentWeather) {
                 Log.v(TAG,
