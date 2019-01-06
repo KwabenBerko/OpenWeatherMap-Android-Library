@@ -20,7 +20,7 @@ public class CurrentWeather {
     private Coord mCoord;
 
     @SerializedName("weather")
-    private List<Weather> mWeatherArray;
+    private List<Weather> mWeather;
 
     @SerializedName("base")
     private String base;
@@ -54,12 +54,12 @@ public class CurrentWeather {
         mCoord = coord;
     }
 
-    public List<Weather> getWeatherArray() {
-        return mWeatherArray;
+    public List<Weather> getWeather() {
+        return mWeather;
     }
 
-    public void setWeatherArray(List<Weather> weatherArray) {
-        mWeatherArray = weatherArray;
+    public void setWeather(List<Weather> weather) {
+        mWeather = weather;
     }
 
     public String getBase() {

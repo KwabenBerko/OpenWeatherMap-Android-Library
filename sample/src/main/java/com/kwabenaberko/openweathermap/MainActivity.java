@@ -20,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Instantiate class
-        OpenWeatherMapHelper helper = new OpenWeatherMapHelper();
+        OpenWeatherMapHelper helper = new OpenWeatherMapHelper("8787349f0b6f01dc5600be5815623001");
 
         //Set API KEY
-        helper.setApiKey(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
+        //helper.setApiKey(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
         //Set Units
         helper.setUnits(Units.IMPERIAL);
         //Set lang
