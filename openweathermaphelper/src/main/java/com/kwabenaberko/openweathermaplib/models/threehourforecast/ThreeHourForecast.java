@@ -20,7 +20,7 @@ public class ThreeHourForecast {
     private int cnt;
 
     @SerializedName("list")
-    private List<ThreeHourWeather> mThreeHourWeatherArray;
+    private List<ThreeHourWeather> mList;
 
     @SerializedName("city")
     private City mCity;
@@ -49,12 +49,12 @@ public class ThreeHourForecast {
         this.cnt = cnt;
     }
 
-    public List<ThreeHourWeather> getThreeHourWeatherArray() {
-        return mThreeHourWeatherArray;
+    public List<ThreeHourWeather> getList() {
+        return mList;
     }
 
-    public void setThreeHourWeatherArray(List<ThreeHourWeather> threeHourWeatherArray) {
-        mThreeHourWeatherArray = threeHourWeatherArray;
+    public void setList(List<ThreeHourWeather> list) {
+        mList = list;
     }
 
     public City getCity() {
