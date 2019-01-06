@@ -19,13 +19,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Instantiate class
-        OpenWeatherMapHelper helper = new OpenWeatherMapHelper();
+        //Instantiate Class With Your ApiKey As The Parameter
+        OpenWeatherMapHelper helper = new OpenWeatherMapHelper(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
 
-        //Set API KEY
-        helper.setApiKey(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
         //Set Units
         helper.setUnits(Units.IMPERIAL);
+
         //Set lang
         helper.setLang(Lang.ENGLISH);
 
@@ -37,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
         helper.getCurrentWeatherByCityName("Accra", new CurrentWeatherCallback() {
             @Override
             public void onSuccess(CurrentWeather currentWeather) {
-                Log.v(TAG, "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLon() +"\n"
+                Log.v(TAG,
+                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLon() +"\n"
                                 +"Weather Description: " + currentWeather.getWeather().get(0).getDescription() + "\n"
                                 +"Temperature: " + currentWeather.getMain().getTempMax()+"\n"
                                 +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
