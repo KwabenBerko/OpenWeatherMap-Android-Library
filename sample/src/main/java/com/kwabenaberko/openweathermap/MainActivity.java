@@ -20,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Instantiate class
-        OpenWeatherMapHelper helper = new OpenWeatherMapHelper("8787349f0b6f01dc5600be5815623001");
+        OpenWeatherMapHelper helper = new OpenWeatherMapHelper();
 
         //Set API KEY
-        //helper.setApiKey(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
+        helper.setApiKey(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
         //Set Units
         helper.setUnits(Units.IMPERIAL);
         //Set lang
@@ -37,9 +37,8 @@ public class MainActivity extends AppCompatActivity {
         helper.getCurrentWeatherByCityName("Accra", new CurrentWeatherCallback() {
             @Override
             public void onSuccess(CurrentWeather currentWeather) {
-                Log.v(TAG,
-                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLon() +"\n"
-                                +"Weather Description: " + currentWeather.getWeatherArray().get(0).getDescription() + "\n"
+                Log.v(TAG, "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLon() +"\n"
+                                +"Weather Description: " + currentWeather.getWeather().get(0).getDescription() + "\n"
                                 +"Temperature: " + currentWeather.getMain().getTempMax()+"\n"
                                 +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
                                 +"City, Country: " + currentWeather.getName() + ", " + currentWeather.getSys().getCountry()
