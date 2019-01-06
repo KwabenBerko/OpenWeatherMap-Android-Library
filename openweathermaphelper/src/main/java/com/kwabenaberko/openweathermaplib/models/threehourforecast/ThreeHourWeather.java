@@ -30,6 +30,12 @@ public class ThreeHourWeather {
     @SerializedName("wind")
     private Wind mWind;
 
+    @SerializedName("rain")
+    private Rain mRain;
+
+    @SerializedName("snow")
+    private Snow mSnow;
+
     @SerializedName("sys")
     private Sys mSys;
 
@@ -74,6 +80,22 @@ public class ThreeHourWeather {
 
     public void setWind(Wind wind) {
         mWind = wind;
+    }
+
+    public Rain getRain() {
+        return mRain;
+    }
+
+    public void setRain(Rain rain) {
+        mRain = rain;
+    }
+
+    public Snow getSnow() {
+        return mSnow;
+    }
+
+    public void setSnow(Snow snow) {
+        mSnow = snow;
     }
 
     public Sys getSys() {
