@@ -7,8 +7,8 @@ import android.util.Log;
 import com.kwabenaberko.openweathermaplib.constants.Lang;
 import com.kwabenaberko.openweathermaplib.constants.Units;
 import com.kwabenaberko.openweathermaplib.implementation.OpenWeatherMapHelper;
-import com.kwabenaberko.openweathermaplib.implementation.callbacks.ThreeHourForecastCallback;
-import com.kwabenaberko.openweathermaplib.models.threehourforecast.ThreeHourForecast;
+import com.kwabenaberko.openweathermaplib.implementation.callbacks.CurrentWeatherCallback;
+import com.kwabenaberko.openweathermaplib.models.currentweather.CurrentWeather;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             public void onFailure(Throwable throwable) {
                 Log.v(TAG, throwable.getMessage());
             }
-        })
+        });
 
     }
 }
