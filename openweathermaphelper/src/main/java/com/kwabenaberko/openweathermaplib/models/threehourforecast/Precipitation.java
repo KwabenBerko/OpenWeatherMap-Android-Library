@@ -5,13 +5,13 @@ import com.google.gson.annotations.SerializedName;
 public class Precipitation {
 
     @SerializedName("3h")
-    private double threeHour;
+    private Double threeHour;
 
-    public double get3h() {
+    public Double get3h() {
         return threeHour;
     }
 
-    public void set3h(double threeHour) {
+    public void set3h(Double threeHour) {
         this.threeHour = threeHour;
     }
 }
