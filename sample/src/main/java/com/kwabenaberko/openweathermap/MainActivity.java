@@ -7,8 +7,8 @@ import android.util.Log;
 import com.kwabenaberko.openweathermaplib.constants.Lang;
 import com.kwabenaberko.openweathermaplib.constants.Units;
 import com.kwabenaberko.openweathermaplib.implementation.OpenWeatherMapHelper;
-import com.kwabenaberko.openweathermaplib.implementation.callbacks.CurrentWeatherCallback;
-import com.kwabenaberko.openweathermaplib.models.currentweather.CurrentWeather;
+import com.kwabenaberko.openweathermaplib.implementation.callbacks.ThreeHourForecastCallback;
+import com.kwabenaberko.openweathermaplib.models.threehourforecast.ThreeHourForecast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         This Example Only Shows how to get current weather by city name
         Check the docs for more methods [https://github.com/KwabenBerko/OpenWeatherMap-Android-Library/]
         */
+
         helper.getCurrentWeatherByCityName("Accra", new CurrentWeatherCallback() {
             @Override
             public void onSuccess(CurrentWeather currentWeather) {
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             public void onFailure(Throwable throwable) {
                 Log.v(TAG, throwable.getMessage());
             }
-        });
+        })
 
     }
 }
