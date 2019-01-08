@@ -190,7 +190,7 @@ public class OpenWeatherMapHelper {
                 .enqueue(new Callback<ThreeHourForecast>() {
                     @Override
                     public void onResponse(@NonNull Call<ThreeHourForecast> call, @NonNull Response<ThreeHourForecast> response) {
-                        HandleThreeHourForecastResponse(response, callback);
+                        handleThreeHourForecastResponse(response, callback);
                     }
 
                     @Override
@@ -208,7 +208,7 @@ public class OpenWeatherMapHelper {
                 .enqueue(new Callback<ThreeHourForecast>() {
                     @Override
                     public void onResponse(@NonNull Call<ThreeHourForecast> call, @NonNull Response<ThreeHourForecast> response) {
-                        HandleThreeHourForecastResponse(response, callback);
+                        handleThreeHourForecastResponse(response, callback);
                     }
 
                     @Override
@@ -227,7 +227,7 @@ public class OpenWeatherMapHelper {
                 .enqueue(new Callback<ThreeHourForecast>() {
                     @Override
                     public void onResponse(@NonNull Call<ThreeHourForecast> call, @NonNull Response<ThreeHourForecast> response) {
-                        HandleThreeHourForecastResponse(response, callback);
+                        handleThreeHourForecastResponse(response, callback);
                     }
 
                     @Override
@@ -245,7 +245,7 @@ public class OpenWeatherMapHelper {
                 .enqueue(new Callback<ThreeHourForecast>() {
                     @Override
                     public void onResponse(@NonNull Call<ThreeHourForecast> call, @NonNull Response<ThreeHourForecast> response) {
-                        HandleThreeHourForecastResponse(response, callback);
+                        handleThreeHourForecastResponse(response, callback);
                     }
 
                     @Override
@@ -256,7 +256,7 @@ public class OpenWeatherMapHelper {
 
     }
 
-    private void HandleThreeHourForecastResponse(Response<ThreeHourForecast> response, ThreeHourForecastCallback callback){
+    private void handleThreeHourForecastResponse(Response<ThreeHourForecast> response, ThreeHourForecastCallback callback){
         if (response.code() == HttpURLConnection.HTTP_OK){
             callback.onSuccess(response.body());
         }
