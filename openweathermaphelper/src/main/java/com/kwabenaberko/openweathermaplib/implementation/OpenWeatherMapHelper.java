@@ -66,7 +66,7 @@ public class OpenWeatherMapHelper {
 
 
     private Throwable NoAppIdErrMessage() {
-        return new Throwable("UnAuthorized. Please set a valid OpenWeatherMap API KEY by using the setApiKey method.");
+        return new Throwable("UnAuthorized. Please set a valid OpenWeatherMap API KEY.");
     }
 
 

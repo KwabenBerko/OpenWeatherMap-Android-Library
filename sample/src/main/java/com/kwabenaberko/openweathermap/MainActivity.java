@@ -28,10 +28,12 @@ public class MainActivity extends AppCompatActivity {
         //Set lang
         helper.setLang(Lang.ENGLISH);
 
+
         /*
         This Example Only Shows how to get current weather by city name
         Check the docs for more methods [https://github.com/KwabenBerko/OpenWeatherMap-Android-Library/]
         */
+
 
         helper.getCurrentWeatherByCityName("Accra", new CurrentWeatherCallback() {
             @Override
