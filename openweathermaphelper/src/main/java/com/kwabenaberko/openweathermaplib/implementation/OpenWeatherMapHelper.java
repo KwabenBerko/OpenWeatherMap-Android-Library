@@ -2,10 +2,10 @@ package com.kwabenaberko.openweathermaplib.implementation;
 
 import android.support.annotation.NonNull;
 
-import com.kwabenaberko.openweathermaplib.implementation.callbacks.CurrentWeatherCallback;
-import com.kwabenaberko.openweathermaplib.implementation.callbacks.ThreeHourForecastCallback;
-import com.kwabenaberko.openweathermaplib.models.currentweather.CurrentWeather;
-import com.kwabenaberko.openweathermaplib.models.threehourforecast.ThreeHourForecast;
+import com.kwabenaberko.openweathermaplib.implementation.callback.CurrentWeatherCallback;
+import com.kwabenaberko.openweathermaplib.implementation.callback.ThreeHourForecastCallback;
+import com.kwabenaberko.openweathermaplib.model.currentweather.CurrentWeather;
+import com.kwabenaberko.openweathermaplib.model.threehourforecast.ThreeHourForecast;
 import com.kwabenaberko.openweathermaplib.network.OpenWeatherMapClient;
 import com.kwabenaberko.openweathermaplib.network.OpenWeatherMapService;
 

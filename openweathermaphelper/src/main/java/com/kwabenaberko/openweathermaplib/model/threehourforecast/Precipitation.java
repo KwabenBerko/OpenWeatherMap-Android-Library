@@ -1,4 +1,4 @@
-package com.kwabenaberko.openweathermaplib.models.threehourforecast;
+package com.kwabenaberko.openweathermaplib.model.threehourforecast;
 
 import com.google.gson.annotations.SerializedName;
 

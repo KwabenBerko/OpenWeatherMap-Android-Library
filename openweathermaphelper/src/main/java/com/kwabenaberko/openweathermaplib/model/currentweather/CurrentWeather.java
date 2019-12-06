@@ -1,12 +1,12 @@
-package com.kwabenaberko.openweathermaplib.models.currentweather;
+package com.kwabenaberko.openweathermaplib.model.currentweather;
 
 import com.google.gson.annotations.SerializedName;
-import com.kwabenaberko.openweathermaplib.models.common.Clouds;
-import com.kwabenaberko.openweathermaplib.models.common.Coord;
-import com.kwabenaberko.openweathermaplib.models.common.Main;
-import com.kwabenaberko.openweathermaplib.models.common.Sys;
-import com.kwabenaberko.openweathermaplib.models.common.Weather;
-import com.kwabenaberko.openweathermaplib.models.common.Wind;
+import com.kwabenaberko.openweathermaplib.model.common.Clouds;
+import com.kwabenaberko.openweathermaplib.model.common.Main;
+import com.kwabenaberko.openweathermaplib.model.common.Weather;
+import com.kwabenaberko.openweathermaplib.model.common.Wind;
+import com.kwabenaberko.openweathermaplib.model.common.Coord;
+import com.kwabenaberko.openweathermaplib.model.common.Sys;
 
 import java.util.List;
 

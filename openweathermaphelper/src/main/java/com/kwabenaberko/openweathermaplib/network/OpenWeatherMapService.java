@@ -1,7 +1,7 @@
 package com.kwabenaberko.openweathermaplib.network;
 
-import com.kwabenaberko.openweathermaplib.models.currentweather.CurrentWeather;
-import com.kwabenaberko.openweathermaplib.models.threehourforecast.ThreeHourForecast;
+import com.kwabenaberko.openweathermaplib.model.currentweather.CurrentWeather;
+import com.kwabenaberko.openweathermaplib.model.threehourforecast.ThreeHourForecast;
 
 import java.util.Map;
 

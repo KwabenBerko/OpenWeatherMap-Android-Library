@@ -1,4 +1,4 @@
-package com.kwabenaberko.openweathermaplib.constants;
+package com.kwabenaberko.openweathermaplib.constant;
 
 public class Lang {
 

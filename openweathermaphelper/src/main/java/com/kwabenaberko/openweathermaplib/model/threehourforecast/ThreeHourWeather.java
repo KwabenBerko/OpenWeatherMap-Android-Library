@@ -1,11 +1,11 @@
-package com.kwabenaberko.openweathermaplib.models.threehourforecast;
+package com.kwabenaberko.openweathermaplib.model.threehourforecast;
 
 import com.google.gson.annotations.SerializedName;
-import com.kwabenaberko.openweathermaplib.models.common.Clouds;
-import com.kwabenaberko.openweathermaplib.models.common.Main;
-import com.kwabenaberko.openweathermaplib.models.common.Sys;
-import com.kwabenaberko.openweathermaplib.models.common.Weather;
-import com.kwabenaberko.openweathermaplib.models.common.Wind;
+import com.kwabenaberko.openweathermaplib.model.common.Clouds;
+import com.kwabenaberko.openweathermaplib.model.common.Main;
+import com.kwabenaberko.openweathermaplib.model.common.Sys;
+import com.kwabenaberko.openweathermaplib.model.common.Weather;
+import com.kwabenaberko.openweathermaplib.model.common.Wind;
 
 import java.util.List;
 

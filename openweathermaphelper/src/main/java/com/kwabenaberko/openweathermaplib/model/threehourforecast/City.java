@@ -1,7 +1,7 @@
-package com.kwabenaberko.openweathermaplib.models.threehourforecast;
+package com.kwabenaberko.openweathermaplib.model.threehourforecast;
 
 import com.google.gson.annotations.SerializedName;
-import com.kwabenaberko.openweathermaplib.models.common.Coord;
+import com.kwabenaberko.openweathermaplib.model.common.Coord;
 
 /**
  * Created by Kwabena Berko on 8/6/2017.
