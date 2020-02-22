@@ -29,7 +29,7 @@ implementation 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:2.0.2'
 
 ## Usage
 
-#### Instantiate Class With Your ApiKey
+#### Instantiate Class With Your OpenWeatherMap Api Key
 
 ``` java 
 OpenWeatherMapHelper helper = new OpenWeatherMapHelper(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
