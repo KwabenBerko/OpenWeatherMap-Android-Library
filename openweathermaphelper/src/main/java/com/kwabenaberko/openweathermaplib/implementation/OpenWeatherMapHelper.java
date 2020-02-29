@@ -1,6 +1,6 @@
 package com.kwabenaberko.openweathermaplib.implementation;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.kwabenaberko.openweathermaplib.implementation.callback.CurrentWeatherCallback;
 import com.kwabenaberko.openweathermaplib.implementation.callback.ThreeHourForecastCallback;
