@@ -4,11 +4,13 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 
-import com.kwabenaberko.openweathermaplib.constants.Lang;
-import com.kwabenaberko.openweathermaplib.constants.Units;
+import com.kwabenaberko.openweathermaplib.constant.Lang;
+import com.kwabenaberko.openweathermaplib.constant.Units;
 import com.kwabenaberko.openweathermaplib.implementation.OpenWeatherMapHelper;
-import com.kwabenaberko.openweathermaplib.implementation.callbacks.CurrentWeatherCallback;
-import com.kwabenaberko.openweathermaplib.models.currentweather.CurrentWeather;
+import com.kwabenaberko.openweathermaplib.implementation.callback.CurrentWeatherCallback;
+import com.kwabenaberko.openweathermaplib.model.currentweather.CurrentWeather;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
