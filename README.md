@@ -35,7 +35,7 @@ implementation 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:2.0.2'
 OpenWeatherMapHelper helper = new OpenWeatherMapHelper(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
 ```
 
-#### Set your Units (Optional, Standard by default) 
+#### Set your Units (Optional, STANDARD by default)
 
 ``` java 
 helper.setUnits(Units.IMPERIAL);
@@ -47,10 +47,10 @@ helper.setUnits(Units.IMPERIAL);
 
 2. ```Units.METRIC (Celsius)```
 
-#### Set language (default : en)
+#### Set your Language (ENGLISH by default)
 
 ``` java
-helper.setLang(Lang.ENGLISH);
+helper.setLang(Languages.ENGLISH);
 ```
 
 ## Features
@@ -146,7 +146,7 @@ helper.setLang(Lang.ENGLISH);
                          +"Forecast Array Count: " + threeHourForecast.getCnt() +"\n"
                          //For this example, we are logging details of only the first forecast object in the forecasts array
                          +"First Forecast Date Timestamp: " + threeHourForecast.getList().get(0).getDt() +"\n"
-                         +"First Forecast Weather Description: " + threeHourForecast.getList().get(0).getWeatherArray().get(0).getDescription()+ "\n"
+                         +"First Forecast Weather Description: " + threeHourForecast.getList().get(0).getWeather().get(0).getDescription()+ "\n"
                          +"First Forecast Max Temperature: " + threeHourForecast.getList().get(0).getMain().getTempMax()+"\n"
                          +"First Forecast Wind Speed: " + threeHourForecast.getList().get(0).getWind().getSpeed() + "\n"
          );
@@ -167,7 +167,7 @@ helper.setLang(Lang.ENGLISH);
                          +"Forecast Array Count: " + threeHourForecast.getCnt() +"\n"
                          //For this example, we are logging details of only the first forecast object in the forecasts array
                          +"First Forecast Date Timestamp: " + threeHourForecast.getList().get(0).getDt() +"\n"
-                         +"First Forecast Weather Description: " + threeHourForecast.getList().get(0).getWeatherArray().get(0).getDescription()+ "\n"
+                         +"First Forecast Weather Description: " + threeHourForecast.getList().get(0).getWeather().get(0).getDescription()+ "\n"
                          +"First Forecast Max Temperature: " + threeHourForecast.getList().get(0).getMain().getTempMax()+"\n"
                          +"First Forecast Wind Speed: " + threeHourForecast.getList().get(0).getWind().getSpeed() + "\n"
          );
@@ -188,7 +188,7 @@ helper.setLang(Lang.ENGLISH);
                          +"Forecast Array Count: " + threeHourForecast.getCnt() +"\n"
                          //For this example, we are logging details of only the first forecast object in the forecasts array
                          +"First Forecast Date Timestamp: " + threeHourForecast.getList().get(0).getDt() +"\n"
-                         +"First Forecast Weather Description: " + threeHourForecast.getList().get(0).getWeatherArray().get(0).getDescription()+ "\n"
+                         +"First Forecast Weather Description: " + threeHourForecast.getList().get(0).getWeather().get(0).getDescription()+ "\n"
                          +"First Forecast Max Temperature: " + threeHourForecast.getList().get(0).getMain().getTempMax()+"\n"
                          +"First Forecast Wind Speed: " + threeHourForecast.getList().get(0).getWind().getSpeed() + "\n"
          );
@@ -209,7 +209,7 @@ helper.setLang(Lang.ENGLISH);
                          +"Forecast Array Count: " + threeHourForecast.getCnt() +"\n"
                          //For this example, we are logging details of only the first forecast object in the forecasts array
                          +"First Forecast Date Timestamp: " + threeHourForecast.getList().get(0).getDt() +"\n"
-                         +"First Forecast Weather Description: " + threeHourForecast.getList().get(0).getWeatherArray().get(0).getDescription()+ "\n"
+                         +"First Forecast Weather Description: " + threeHourForecast.getList().get(0).getWeather().get(0).getDescription()+ "\n"
                          +"First Forecast Max Temperature: " + threeHourForecast.getList().get(0).getMain().getTempMax()+"\n"
                          +"First Forecast Wind Speed: " + threeHourForecast.getList().get(0).getWind().getSpeed() + "\n"
          );
@@ -227,4 +227,5 @@ helper.setLang(Lang.ENGLISH);
 
 
 ### Upcoming Feature
-1. 16 day / daily forecast 
+1. Hourly Forecast 4 days
+2. Daily Forecast 16 days

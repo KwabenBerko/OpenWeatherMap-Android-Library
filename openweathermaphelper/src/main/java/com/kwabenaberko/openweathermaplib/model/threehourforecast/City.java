@@ -16,51 +16,52 @@ public class City {
     private String name;
 
     @SerializedName("coord")
-    private Coord mCoord;
+    private Coord coord;
 
     @SerializedName("country")
     private String country;
 
+    @SerializedName("timezone")
+    private Long timezone;
+
     @SerializedName("population")
-    private long population;
+    private Long population;
+
+    @SerializedName("sunrise")
+    private Long sunrise;
+
+    @SerializedName("sunset")
+    private Long sunset;
 
     public long getId() {
         return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public Coord getCoord() {
-        return mCoord;
-    }
-
-    public void setCoord(Coord coord) {
-        mCoord = coord;
+        return coord;
     }
 
     public String getCountry() {
         return country;
     }
 
-    public void setCountry(String country) {
-        this.country = country;
+    public Long getTimezone() {
+        return timezone;
     }
 
-    public long getPopulation() {
+    public Long getPopulation() {
         return population;
     }
 
-    public void setPopulation(long population) {
-        this.population = population;
+    public Long getSunrise() {
+        return sunrise;
+    }
+
+    public Long getSunset() {
+        return sunset;
     }
 }

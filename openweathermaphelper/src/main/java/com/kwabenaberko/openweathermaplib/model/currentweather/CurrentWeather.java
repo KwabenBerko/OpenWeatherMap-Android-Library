@@ -3,6 +3,8 @@ package com.kwabenaberko.openweathermaplib.model.currentweather;
 import com.google.gson.annotations.SerializedName;
 import com.kwabenaberko.openweathermaplib.model.common.Clouds;
 import com.kwabenaberko.openweathermaplib.model.common.Main;
+import com.kwabenaberko.openweathermaplib.model.common.Rain;
+import com.kwabenaberko.openweathermaplib.model.common.Snow;
 import com.kwabenaberko.openweathermaplib.model.common.Weather;
 import com.kwabenaberko.openweathermaplib.model.common.Wind;
 import com.kwabenaberko.openweathermaplib.model.common.Coord;
@@ -17,28 +19,40 @@ import java.util.List;
 public class CurrentWeather {
 
     @SerializedName("coord")
-    private Coord mCoord;
+    private Coord coord;
 
     @SerializedName("weather")
-    private List<Weather> mWeather;
+    private List<Weather> weather;
 
     @SerializedName("base")
     private String base;
 
     @SerializedName("main")
-    private Main mMain;
+    private Main main;
+
+    @SerializedName("visibility")
+    private Long visibility;
 
     @SerializedName("wind")
-    private Wind mWind;
+    private Wind wind;
 
     @SerializedName("clouds")
-    private Clouds mClouds;
+    private Clouds clouds;
+
+    @SerializedName("rain")
+    private Rain rain;
+
+    @SerializedName("snow")
+    private Snow snow;
 
     @SerializedName("dt")
     private Long dt;
 
     @SerializedName("sys")
-    private Sys mSys;
+    private Sys sys;
+
+    @SerializedName("timezone")
+    private Long timezone;
 
     @SerializedName("id")
     private Long id;
@@ -46,83 +60,66 @@ public class CurrentWeather {
     @SerializedName("name")
     private String name;
 
-    public Coord getCoord() {
-        return mCoord;
-    }
+    @SerializedName("cod")
+    private Integer cod;
 
-    public void setCoord(Coord coord) {
-        mCoord = coord;
+    public Coord getCoord() {
+        return coord;
     }
 
     public List<Weather> getWeather() {
-        return mWeather;
-    }
-
-    public void setWeather(List<Weather> weather) {
-        mWeather = weather;
+        return weather;
     }
 
     public String getBase() {
         return base;
     }
 
-    public void setBase(String base) {
-        this.base = base;
-    }
-
     public Main getMain() {
-        return mMain;
+        return main;
     }
 
-    public void setMain(Main main) {
-        mMain = main;
+    public Long getVisibility() {
+        return visibility;
     }
 
     public Wind getWind() {
-        return mWind;
-    }
-
-    public void setWind(Wind wind) {
-        mWind = wind;
+        return wind;
     }
 
     public Clouds getClouds() {
-        return mClouds;
+        return clouds;
     }
 
-    public void setClouds(Clouds clouds) {
-        mClouds = clouds;
+    public Rain getRain() {
+        return rain;
+    }
+
+    public Snow getSnow() {
+        return snow;
     }
 
     public Long getDt() {
         return dt;
     }
 
-    public void setDt(Long dt) {
-        this.dt = dt;
-    }
-
     public Sys getSys() {
-        return mSys;
+        return sys;
     }
 
-    public void setSys(Sys sys) {
-        mSys = sys;
+    public Long getTimezone() {
+        return timezone;
     }
 
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Integer getCod() {
+        return cod;
     }
 }

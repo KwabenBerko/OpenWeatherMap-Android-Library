@@ -4,12 +4,13 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 
-import com.kwabenaberko.openweathermaplib.constant.Lang;
+import com.kwabenaberko.openweathermaplib.constant.Languages;
 import com.kwabenaberko.openweathermaplib.constant.Units;
 import com.kwabenaberko.openweathermaplib.implementation.OpenWeatherMapHelper;
 import com.kwabenaberko.openweathermaplib.implementation.callback.CurrentWeatherCallback;
+import com.kwabenaberko.openweathermaplib.implementation.callback.ThreeHourForecastCallback;
 import com.kwabenaberko.openweathermaplib.model.currentweather.CurrentWeather;
-
+import com.kwabenaberko.openweathermaplib.model.threehourforecast.ThreeHourForecast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -27,9 +28,8 @@ public class MainActivity extends AppCompatActivity {
         //Set Units
         helper.setUnits(Units.IMPERIAL);
 
-        //Set lang
-        helper.setLang(Lang.ENGLISH);
-
+        //Set Languages
+        helper.setLang(Languages.ENGLISH);
 
         /*
         This Example Only Shows how to get current weather by city name
@@ -37,15 +37,35 @@ public class MainActivity extends AppCompatActivity {
         */
 
 
-        helper.getCurrentWeatherByCityName("Accra", new CurrentWeatherCallback() {
+//        helper.getCurrentWeatherByCityName("Accra", new CurrentWeatherCallback() {
+//            @Override
+//            public void onSuccess(CurrentWeather currentWeather) {
+//                Log.v(TAG,
+//                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLon() +"\n"
+//                                +"Weather Description: " + currentWeather.getWeather().get(0).getDescription() + "\n"
+//                                +"Temperature: " + currentWeather.getMain().getTempMax()+"\n"
+//                                +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
+//                                +"City, Country: " + currentWeather.getName() + ", " + currentWeather.getSys().getCountry()
+//                );
+//            }
+//
+//            @Override
+//            public void onFailure(Throwable throwable) {
+//                Log.v(TAG, throwable.getMessage());
+//            }
+//        });
+
+
+        helper.getThreeHourForecastByCityName("Ontario, CA", new ThreeHourForecastCallback() {
             @Override
-            public void onSuccess(CurrentWeather currentWeather) {
-                Log.v(TAG,
-                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLon() +"\n"
-                                +"Weather Description: " + currentWeather.getWeather().get(0).getDescription() + "\n"
-                                +"Temperature: " + currentWeather.getMain().getTempMax()+"\n"
-                                +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
-                                +"City, Country: " + currentWeather.getName() + ", " + currentWeather.getSys().getCountry()
+            public void onSuccess(ThreeHourForecast threeHourForecast) {
+                Log.v(TAG, "City/Country: "+ threeHourForecast.getCity().getName() + "/" + threeHourForecast.getCity().getCountry() +"\n"
+                        +"Forecast Array Count: " + threeHourForecast.getCnt() +"\n"
+                        //For this example, we are logging details of only the first forecast object in the forecasts array
+                        +"First Forecast Date Timestamp: " + threeHourForecast.getList().get(0).getDt() +"\n"
+                        +"First Forecast Weather Description: " + threeHourForecast.getList().get(0).getWeather().get(0).getDescription()+ "\n"
+                        +"First Forecast Max Temperature: " + threeHourForecast.getList().get(0).getMain().getTempMax()+"\n"
+                        +"First Forecast Wind Speed: " + threeHourForecast.getList().get(0).getWind().getSpeed() + "\n"
                 );
             }
 

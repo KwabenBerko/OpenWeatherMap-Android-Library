@@ -10,11 +10,8 @@ public class Main {
     @SerializedName("temp")
     private double temp;
 
-    @SerializedName("pressure")
-    private double pressure;
-
-    @SerializedName("humidity")
-    private double humidity;
+    @SerializedName("feels_like")
+    private double feelsLike;
 
     @SerializedName("temp_min")
     private double tempMin;
@@ -22,77 +19,55 @@ public class Main {
     @SerializedName("temp_max")
     private double tempMax;
 
+    @SerializedName("pressure")
+    private double pressure;
+
+    @SerializedName("humidity")
+    private double humidity;
+
     @SerializedName("sea_level")
-    private double seaLevel;
+    private Double seaLevel;
 
     @SerializedName("grnd_level")
-    private double grndLevel;
+    private Double grndLevel;
 
     @SerializedName("temp_kf")
-    private double tempKf;
+    private Double tempKf;
 
 
     public double getTemp() {
         return temp;
     }
 
-    public void setTemp(double temp) {
-        this.temp = temp;
-    }
-
-    public double getPressure() {
-        return pressure;
-    }
-
-    public void setPressure(double pressure) {
-        this.pressure = pressure;
-    }
-
-    public double getHumidity() {
-        return humidity;
-    }
-
-    public void setHumidity(double humidity) {
-        this.humidity = humidity;
+    public double getFeelsLike() {
+        return feelsLike;
     }
 
     public double getTempMin() {
         return tempMin;
     }
 
-    public void setTempMin(double tempMin) {
-        this.tempMin = tempMin;
-    }
-
     public double getTempMax() {
         return tempMax;
     }
 
-    public void setTempMax(double tempMax) {
-        this.tempMax = tempMax;
+    public double getPressure() {
+        return pressure;
     }
 
-    public double getSeaLevel() {
+    public double getHumidity() {
+        return humidity;
+    }
+
+    public Double getSeaLevel() {
         return seaLevel;
     }
 
-    public void setSeaLevel(double seaLevel) {
-        this.seaLevel = seaLevel;
-    }
-
-    public double getGrndLevel() {
+    public Double getGrndLevel() {
         return grndLevel;
     }
 
-    public void setGrndLevel(double grndLevel) {
-        this.grndLevel = grndLevel;
-    }
-
-    public double getTempKf() {
+    public Double getTempKf() {
         return tempKf;
-    }
-
-    public void setTempKf(double tempKf) {
-        this.tempKf = tempKf;
     }
 }

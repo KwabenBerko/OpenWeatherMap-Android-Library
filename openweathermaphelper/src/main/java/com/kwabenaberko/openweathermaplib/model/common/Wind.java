@@ -13,19 +13,18 @@ public class Wind {
     @SerializedName("deg")
     private double deg;
 
+    @SerializedName("gust")
+    private Double gust;
+
     public double getSpeed() {
         return speed;
-    }
-
-    public void setSpeed(double speed) {
-        this.speed = speed;
     }
 
     public double getDeg() {
         return deg;
     }
 
-    public void setDeg(double deg) {
-        this.deg = deg;
+    public Double getGust() {
+        return gust;
     }
 }

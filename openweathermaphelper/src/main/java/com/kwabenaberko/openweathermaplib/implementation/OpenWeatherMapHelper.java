@@ -36,14 +36,9 @@ public class OpenWeatherMapHelper {
     private static final String LONGITUDE = "lon";
     private static final String ZIP_CODE = "zip";
 
-    private OpenWeatherMapService openWeatherMapService;
-    private Map<String, String> options;
+    private final OpenWeatherMapService openWeatherMapService;
+    private final Map<String, String> options;
 
-
-    @Deprecated
-    public OpenWeatherMapHelper(){
-        this("");
-    }
 
     public OpenWeatherMapHelper(String apiKey){
         openWeatherMapService = OpenWeatherMapClient.getClient().create(OpenWeatherMapService.class);
@@ -53,10 +48,6 @@ public class OpenWeatherMapHelper {
 
 
     //SETUP METHODS
-    @Deprecated
-    public void setApiKey(String appId){
-        options.put(APPID, appId);
-    }
     public void setUnits(String units){
         options.put(UNITS, units);
     }

@@ -3,6 +3,8 @@ package com.kwabenaberko.openweathermaplib.model.threehourforecast;
 import com.google.gson.annotations.SerializedName;
 import com.kwabenaberko.openweathermaplib.model.common.Clouds;
 import com.kwabenaberko.openweathermaplib.model.common.Main;
+import com.kwabenaberko.openweathermaplib.model.common.Rain;
+import com.kwabenaberko.openweathermaplib.model.common.Snow;
 import com.kwabenaberko.openweathermaplib.model.common.Sys;
 import com.kwabenaberko.openweathermaplib.model.common.Weather;
 import com.kwabenaberko.openweathermaplib.model.common.Wind;
@@ -13,28 +15,34 @@ import java.util.List;
  * Created by Kwabena Berko on 8/6/2017.
  */
 
-public class ThreeHourWeather {
+public class ThreeHourForecastWeather {
 
     @SerializedName("dt")
     private Long dt;
 
     @SerializedName("main")
-    private Main mMain;
+    private Main main;
 
     @SerializedName("weather")
-    private List<Weather> mWeatherArray;
+    private List<Weather> weather;
 
     @SerializedName("clouds")
-    private Clouds mClouds;
+    private Clouds clouds;
 
     @SerializedName("wind")
-    private Wind mWind;
+    private Wind wind;
+
+    @SerializedName("visibility")
+    private Long visibility;
+
+    @SerializedName("pop")
+    private Double pop;
 
     @SerializedName("rain")
-    private Rain mRain;
+    private Rain rain;
 
     @SerializedName("snow")
-    private Snow mSnow;
+    private Snow snow;
 
     @SerializedName("sys")
     private Sys mSys;
@@ -51,59 +59,67 @@ public class ThreeHourWeather {
     }
 
     public Main getMain() {
-        return mMain;
+        return main;
     }
 
     public void setMain(Main main) {
-        mMain = main;
+        this.main = main;
     }
 
-    public List<Weather> getWeatherArray() {
-        return mWeatherArray;
+    public List<Weather> getWeather() {
+        return weather;
     }
 
-    public void setWeatherArray(List<Weather> weatherArray) {
-        mWeatherArray = weatherArray;
+    public void setWeather(List<Weather> weather) {
+        this.weather = weather;
     }
 
     public Clouds getClouds() {
-        return mClouds;
+        return clouds;
     }
 
     public void setClouds(Clouds clouds) {
-        mClouds = clouds;
+        this.clouds = clouds;
     }
 
     public Wind getWind() {
-        return mWind;
+        return wind;
+    }
+
+    public Long getVisibility() {
+        return visibility;
+    }
+
+    public Double getPop() {
+        return pop;
     }
 
     public void setWind(Wind wind) {
-        mWind = wind;
+        this.wind = wind;
     }
 
     public Rain getRain() {
-        return mRain;
+        return rain;
     }
 
     public void setRain(Rain rain) {
-        mRain = rain;
+        this.rain = rain;
     }
 
     public Snow getSnow() {
-        return mSnow;
+        return snow;
     }
 
     public void setSnow(Snow snow) {
-        mSnow = snow;
+        this.snow = snow;
     }
 
-    public Sys getSys() {
+    public Sys getmSys() {
         return mSys;
     }
 
-    public void setSys(Sys sys) {
-        mSys = sys;
+    public void setmSys(Sys mSys) {
+        this.mSys = mSys;
     }
 
     public String getDtTxt() {
