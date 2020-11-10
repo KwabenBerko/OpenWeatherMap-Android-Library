@@ -30,8 +30,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.3'
-    implementation project(":openweathermaphelper")
-    //implementation 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:2.0.3-alpha'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:2.1.0-alpha'
     testImplementation 'junit:junit:4.13.1'
 }
