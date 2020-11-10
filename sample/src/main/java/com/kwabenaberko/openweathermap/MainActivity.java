@@ -37,35 +37,15 @@ public class MainActivity extends AppCompatActivity {
         */
 
 
-//        helper.getCurrentWeatherByCityName("Accra", new CurrentWeatherCallback() {
-//            @Override
-//            public void onSuccess(CurrentWeather currentWeather) {
-//                Log.v(TAG,
-//                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLon() +"\n"
-//                                +"Weather Description: " + currentWeather.getWeather().get(0).getDescription() + "\n"
-//                                +"Temperature: " + currentWeather.getMain().getTempMax()+"\n"
-//                                +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
-//                                +"City, Country: " + currentWeather.getName() + ", " + currentWeather.getSys().getCountry()
-//                );
-//            }
-//
-//            @Override
-//            public void onFailure(Throwable throwable) {
-//                Log.v(TAG, throwable.getMessage());
-//            }
-//        });
-
-
-        helper.getThreeHourForecastByCityName("Ontario, CA", new ThreeHourForecastCallback() {
+        helper.getCurrentWeatherByCityName("Accra", new CurrentWeatherCallback() {
             @Override
-            public void onSuccess(ThreeHourForecast threeHourForecast) {
-                Log.v(TAG, "City/Country: "+ threeHourForecast.getCity().getName() + "/" + threeHourForecast.getCity().getCountry() +"\n"
-                        +"Forecast Array Count: " + threeHourForecast.getCnt() +"\n"
-                        //For this example, we are logging details of only the first forecast object in the forecasts array
-                        +"First Forecast Date Timestamp: " + threeHourForecast.getList().get(0).getDt() +"\n"
-                        +"First Forecast Weather Description: " + threeHourForecast.getList().get(0).getWeather().get(0).getDescription()+ "\n"
-                        +"First Forecast Max Temperature: " + threeHourForecast.getList().get(0).getMain().getTempMax()+"\n"
-                        +"First Forecast Wind Speed: " + threeHourForecast.getList().get(0).getWind().getSpeed() + "\n"
+            public void onSuccess(CurrentWeather currentWeather) {
+                Log.v(TAG,
+                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLon() +"\n"
+                                +"Weather Description: " + currentWeather.getWeather().get(0).getDescription() + "\n"
+                                +"Temperature: " + currentWeather.getMain().getTempMax()+"\n"
+                                +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
+                                +"City, Country: " + currentWeather.getName() + ", " + currentWeather.getSys().getCountry()
                 );
             }
 
