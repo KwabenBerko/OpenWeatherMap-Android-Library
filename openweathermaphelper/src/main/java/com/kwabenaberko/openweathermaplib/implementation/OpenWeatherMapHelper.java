@@ -53,7 +53,7 @@ public class OpenWeatherMapHelper {
     public void setUnits(String units){
         options.put(UNITS, units);
     }
-    public void setLang(String lang) {
+    public void setLanguage(String lang) {
         options.put(LANGUAGE, lang);
     }
 

@@ -22,7 +22,7 @@ allprojects {
 #### Step 2 : Download via ```Gradle```:
 
 ```java
-implementation 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:2.0.2'
+implementation 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:2.1.0'
 ```
 
 **Note: Remember to include the INTERNET permission to your manifest file**
