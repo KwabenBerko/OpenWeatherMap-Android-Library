@@ -50,7 +50,7 @@ helper.setUnits(Units.IMPERIAL);
 #### Set your Language (ENGLISH by default)
 
 ``` java
-helper.setLang(Languages.ENGLISH);
+helper.setLanguage(Languages.ENGLISH);
 ```
 
 ## Features

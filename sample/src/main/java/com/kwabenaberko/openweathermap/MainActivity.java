@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         helper.setUnits(Units.IMPERIAL);
 
         //Set Languages
-        helper.setLang(Languages.ENGLISH);
+        helper.setLanguage(Languages.ENGLISH);
 
         /*
         This Example Only Shows how to get current weather by city name
@@ -54,8 +54,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
-
-
 }
