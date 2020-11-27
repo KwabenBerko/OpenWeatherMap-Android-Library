@@ -1,5 +1,7 @@
 package com.kwabenaberko.openweathermaplib.implementation;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 
 import com.kwabenaberko.openweathermaplib.implementation.callback.CurrentWeatherCallback;
@@ -84,6 +86,7 @@ public class OpenWeatherMapHelper {
     //GET CURRENT WEATHER BY CITY NAME
     public void getCurrentWeatherByCityName(String city, final CurrentWeatherCallback callback){
         options.put(QUERY, city);
+
         openWeatherMapService.getCurrentWeatherByCityName(options).enqueue(new Callback<CurrentWeather>() {
             @Override
             public void onResponse(@NonNull Call<CurrentWeather> call, @NonNull Response<CurrentWeather> response) {

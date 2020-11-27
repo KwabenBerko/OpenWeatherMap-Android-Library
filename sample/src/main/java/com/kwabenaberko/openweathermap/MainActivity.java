@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         Check the docs for more methods [https://github.com/KwabenBerko/OpenWeatherMap-Android-Library/]
         */
 
-
         helper.getCurrentWeatherByCityName("Accra", new CurrentWeatherCallback() {
             @Override
             public void onSuccess(CurrentWeather currentWeather) {
