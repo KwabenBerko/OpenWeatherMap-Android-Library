@@ -226,6 +226,6 @@ helper.setLanguage(Languages.ENGLISH);
 
 
 
-### Upcoming Feature
+### Upcoming Features
 1. Hourly Forecast 4 days
 2. Daily Forecast 16 days
